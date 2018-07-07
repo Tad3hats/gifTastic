@@ -59,8 +59,18 @@ $(document).on("click", ".giphyButton", function () {
 
 
 //onsubmit here, grab form value push it into player var and then call renderButtons function
+  
+  $("#addPlayer").on("click", function(event) {
+    event.preventDefault();
+    // This line grabs the input from the textbox
+    var addPlayer = $("#player-input").val().trim();
 
-
+    // Adding the player from the textbox to our array
+    players.push(addPlayer);
+    console.log(players);
+    renderButtons();
+  }
+);
 
 renderButtons();
 
