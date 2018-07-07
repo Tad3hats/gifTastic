@@ -6,6 +6,9 @@ var players = ["Michael Jordan", "Stephen Curry", "Steve Nash", "Scottie Pippen"
     "Tracy McGrady", "Russell Westbrook", "Paul Pierce", "Jeremy Lin"];
 
 function renderButtons() {
+    //empty basketballButtons before setting them up
+    $("#basketballButtons").empty();
+
     for (var i = 0; i < players.length; i++) {
         //this creates buttons and fills them with the player array
         $("#basketballButtons").append("<button class='giphyButton'>" + players[i] + "</button>");
